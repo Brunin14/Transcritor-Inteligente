@@ -6,7 +6,7 @@ from yt_dlp import YoutubeDL
 import tempfile
 
 app = Flask(__name__)
-model = whisper.load_model("base")  # você pode trocar para "small", "medium" etc.
+model = whisper.load_model("base")
 
 def transcrever_audio(path_audio):
     result = model.transcribe(path_audio, language='pt', fp16=False)
